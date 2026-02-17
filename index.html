@@ -17,11 +17,12 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-// Get coordinates from URL
+// 1️⃣ Get coordinates from URL
 const params = new URLSearchParams(window.location.search);
 const lat = parseFloat(params.get("lat"));
 const lng = parseFloat(params.get("lng"));
 
+// 2️⃣ Show map if coordinates exist
 if(lat && lng){
 
     const map = L.map('map').setView([lat, lng], 18);
